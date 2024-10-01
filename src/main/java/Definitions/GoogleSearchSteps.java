@@ -1,22 +1,22 @@
 package Definitions;
 
 import Pages.GoogleSearchPage;
-import io.cucumber.java.After;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.WebDriver;
 import org.junit.Assert;
 
 public class GoogleSearchSteps {
 	
-	GoogleSearchPage googleSearchPage = new GoogleSearchPage();
+	private WebDriver driver;
+    private GoogleSearchPage googleSearchPage = new GoogleSearchPage(driver);;
 	
 	public GoogleSearchSteps() {}
 
-	@Given("^I\\'m on the homepage on (.*)$")
-	public void openGoogleHomepage(String browser) {
-		googleSearchPage.openBrowser(browser);
+	@Given("I go to the Google homepage")
+	public void openGoogleHomepage() {
 		googleSearchPage.openGoogleHomepage();
 	}
 
@@ -53,10 +53,5 @@ public class GoogleSearchSteps {
 	@And("^I click on the first suggestion in the list$")
 	public void clickFirstListItem() {
 		googleSearchPage.clickFirstListItem();
-	}
-	
-	@After("@AfterQuitDriver")
-	public void endTest() {
-		googleSearchPage.quitDriver();
 	}
 }

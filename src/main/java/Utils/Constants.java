@@ -5,13 +5,13 @@ public enum Constants {
 	  FIREFOX("Firefox"),
 	  SEARCH_RESULTS("search results");
 
-	  private String valor;
+	  private String value;
 
-	  private Constants(String valor) {
-	    this.valor = valor;
+	  private Constants(String value) {
+	    this.value = value;
 	  }
 
-	  public String getValor() {
-	    return valor;
+	  public String getValue() {
+	    return value;
 	  }
 	}
