@@ -1,58 +1,77 @@
-# Test Automation Framework with Java, Selenium, and Cucumber
+# UI Test Automation with Java, Selenium, and Cucumber
 
-This repository provides a basic setup for automating web application testing using **Java**, **Selenium WebDriver**, and **Cucumber** with **Gherkin** for writing test cases in a human-readable format. It serves as a starting point for anyone looking to build a test automation framework for UI testing.
+![CI](https://img.shields.io/badge/CI-GitHub%20Actions-blue)
+![Java](https://img.shields.io/badge/Java-17-orange)
+![Selenium](https://img.shields.io/badge/Selenium-4.10-green)
+![Cucumber](https://img.shields.io/badge/Cucumber-BDD-yellow)
 
-## Features:
-- **Selenium WebDriver** for interacting with web browsers.
-- **Cucumber** for behavior-driven development (BDD), enabling writing test cases in plain English using **Gherkin** syntax.
-- **JUnit** integration for running the tests.
-- Pre-configured **Maven** project for dependency management and easy project build.
-- Basic folder structure for organizing test cases, step definitions, and feature files.
+This project is a polished example of a UI test automation framework built with Java, Selenium WebDriver, Cucumber, and JUnit. It demonstrates how to structure readable, maintainable, and behavior-driven automated tests for a real browser flow.
 
-## Project Structure:
-	test-automation-selenium-cucumber/
-	├── .settings
-	├── src
-	│   ├── main
-	│   │   ├── java
-	│   │   │   ├── Definitions        
-	│   │   │   ├── Pages             
-	│   │   │   └── Utils             
-	│   └── test
-	│       ├── java
-	│       │   └── runners           
-	│       └── resources
-	│           ├── drivers           
-	│           └── features          
+## Why this project stands out
+- Shows solid automation testing fundamentals.
+- Implements Behavior-Driven Development with Gherkin.
+- Uses the Page Object Model to keep the code maintainable.
+- Includes a clean structure suitable for portfolio and learning purposes.
+- Is ready to be extended with CI, reporting, and richer scenarios.
 
-## Tools & Technologies:
-- **Java**: Programming language used for the test framework.
-- **Selenium WebDriver**: Browser automation tool.
-- **Cucumber**: Framework for BDD-style test cases.
-- **JUnit**: Test runner framework.
-- **Maven**: Dependency and build management tool.
+## Tech stack
+- Java 17
+- Maven
+- Selenium WebDriver
+- Cucumber
+- JUnit 5
+- WebDriverManager
 
-## How to Get Started:
+## Project structure
+```text
+src/
+  main/
+    java/
+      Definitions/
+      Pages/
+      Utils/
+  test/
+    java/
+      runners/
+      Utils/
+    resources/
+      features/
+      drivers/
+```
 
+## Getting started
 1. Clone the repository:
    ```bash
    git clone https://github.com/<your-username>/test-automation-selenium-cucumber.git
-
-2. Install the dependencies using Maven:
-    ```bash
-    mvn clean install
-
+   ```
+2. Install dependencies:
+   ```bash
+   mvn clean install
+   ```
 3. Run the tests:
-    ```bash
-    mvn test
+   ```bash
+   mvn test
+   ```
 
-4. To add or modify test scenarios, navigate to the src/test/resources/features/ directory and edit the .feature files. You can create new step definitions in the src/test/java/steps/ directory.
+## Example test flow
+The current scenario automates a Google search journey:
+- opens the homepage,
+- enters a search term,
+- validates suggestions,
+- selects one suggestion,
+- verifies the search results page.
 
-## Prerequisites:
+## Continuous Integration
+A GitHub Actions workflow is included to run the suite automatically on push and pull requests. The workflow is defined in [.github/workflows/ci.yml](.github/workflows/ci.yml).
 
-- JDK 8 or higher installed.
-- Maven installed.
-- ChromeDriver or any WebDriver executable in your system's PATH.
+## Screenshots and evidence
+A dedicated folder for visual evidence and execution captures is included in [docs/screenshots/README.md](docs/screenshots/README.md). You can add screenshots there to make the repository more impressive for portfolio review.
 
-## Contributing:
-Feel free to fork this repository and contribute by adding more test cases, improving existing ones
+## What this project demonstrates
+- Clean separation between test logic and UI interactions.
+- Real-world usage of BDD with Cucumber.
+- Practical Selenium automation patterns.
+- A solid base for scaling into a larger automation framework.
+
+## Portfolio-ready summary
+> A BDD-based UI automation framework built in Java with Selenium and Cucumber, designed to demonstrate clean test architecture, maintainable page objects, and real browser automation flows.
