@@ -12,6 +12,6 @@ Feature: Google Homepage Search
     Then I go to the <pageName> page
 
     Examples: 
-      | searchText            | textResult                                                    | pageName                     |
-      | The name of the w     | The Name of the Wind - Patrick Rothfuss                       | Patrick Rothfuss - The Books |
-			| The canterville       | El fantasma de Canterville - Wikipedia, la enciclopedia libre | Canterville                  |
+      | searchText            | textResult              | pageName               |
+      | The name of the w     | The Name of the Wind    | the name of the wind   |
+      | The canterville       | The Canterville Ghost   | Canterville            |

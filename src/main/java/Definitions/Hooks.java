@@ -1,17 +1,17 @@
 package Definitions;
 
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
 public class Hooks {
 
-    private WebDriver driver;
+    private static WebDriver driver;
 
-    @BeforeEach
+    @Before
     public void setup() {
         WebDriverManager.chromedriver().setup();
 
@@ -32,14 +32,15 @@ public class Hooks {
         driver = new ChromeDriver(options);
     }
 
-    @AfterEach
+    @After
     public void tearDown() {
         if (driver != null) {
             driver.quit();
+            driver = null;
         }
     }
 
-    public WebDriver getDriver() {
+    public static WebDriver getDriver() {
         return driver;
     }
 }
