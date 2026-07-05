@@ -61,6 +61,14 @@ The current scenario automates a Google search journey:
 - selects one suggestion,
 - verifies the search results page.
 
+## CAPTCHA handling
+This project includes a **basic CAPTCHA handling** mechanism for demonstration purposes.
+
+- When the standard **"I'm not a robot"** checkbox is displayed, the automation attempts to interact with it by simply clicking the checkbox.
+- If Google determines that additional verification is required and presents the **advanced image or challenge CAPTCHA**, the automation cannot solve it automatically.
+
+This limitation is expected, as advanced CAPTCHA challenges are specifically designed to prevent automated interaction. Therefore, tests requiring manual CAPTCHA resolution should be completed manually before continuing.
+
 ## Continuous Integration
 A GitHub Actions workflow is included to run the suite automatically on push and pull requests. The workflow is defined in [.github/workflows/ci.yml](.github/workflows/ci.yml).
 
