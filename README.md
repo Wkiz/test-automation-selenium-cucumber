@@ -73,7 +73,7 @@ This limitation is expected, as advanced CAPTCHA challenges are specifically des
 A GitHub Actions workflow is included to run the suite automatically on push and pull requests. The workflow is defined in [.github/workflows/ci.yml](.github/workflows/ci.yml).
 
 ## Screenshots and evidence
-A dedicated folder for visual evidence and execution captures is included in [docs/screenshots/README.md](docs/screenshots/README.md). You can add screenshots there to make the repository more impressive for portfolio review.
+A dedicated folder for visual evidence and execution captures is included in [docs/screenshots/README.md](docs/screenshots/README.md).
 
 ## What this project demonstrates
 - Clean separation between test logic and UI interactions.
